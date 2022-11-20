@@ -1,0 +1,13 @@
+nav {
+  padding: 1em;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+  list-style: none;
+}
