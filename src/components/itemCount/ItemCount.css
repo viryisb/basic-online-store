@@ -1,0 +1,112 @@
+.input-number-group {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.input-number-group input[type='number']::-webkit-inner-spin-button,
+.input-number-group input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.input-number-group .input-group-button {
+  line-height: calc(80px / 2 - 5px);
+}
+
+.input-number-group .input-number {
+  width: 80px;
+  padding: 0 12px;
+
+  text-align: center;
+  outline: none;
+  display: block;
+  margin: 0;
+}
+
+.input-number-group .input-number,
+.input-number-group .input-number-decrement,
+.input-number-group .input-number-increment {
+  border: 1px solid #cacaca;
+  height: 40px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 0;
+}
+
+.input-number-group .input-number-decrement,
+.input-number-group .input-number-increment {
+  display: inline-block;
+  width: 40px;
+  background: #e6e6e6;
+  color: #0a0a0a;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.input-number-group .input-number-decrement {
+  margin-right: 0.3rem;
+}
+
+.input-number-group .input-number-increment {
+  margin-left: 0.3rem;
+}
+
+.cart-btn-container {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+}
+.cart-btn {
+  background-image: linear-gradient(#f7f8fa, #e7e9ec);
+  border-color: #adb1b8 #a2a6ac #8d9096;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, 0.6) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Amazon Ember', Arial, sans-serif;
+  font-size: 14px;
+  height: 40px;
+  font-size: 13px;
+  outline: 0;
+  overflow: hidden;
+  margin-right: 3px;
+  padding: 0 11px;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.cart-btn:active {
+  border-bottom-color: #a2a6ac;
+}
+
+.cart-btn:active:hover {
+  border-bottom-color: #a2a6ac;
+}
+
+.cart-btn:hover {
+  border-color: #a2a6ac #979aa1 #82858a;
+}
+
+.cart-btn:focus {
+  border-color: #e84393;
+  box-shadow: rgba(217, 17, 228, 0.5) 0 0 3px 2px;
+  outline: 0;
+}
