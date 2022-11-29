@@ -3,10 +3,14 @@ import ItemCount from '../itemCount/ItemCount';
 import './ItemListContainer.css';
 
 const ItemListContainer = ({ greeting }) => {
+  const onAdd = (sum) => {
+    console.log(sum);
+  };
+
   return (
     <>
       <h1> {greeting}</h1>;
-      <ItemCount />;
+      <ItemCount stock={5} initial={1} onAdd={onAdd} />
     </>
   );
 };
