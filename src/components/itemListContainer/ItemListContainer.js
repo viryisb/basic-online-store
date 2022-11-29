@@ -3,8 +3,8 @@ import ItemCount from '../itemCount/ItemCount';
 import './ItemListContainer.css';
 
 const ItemListContainer = ({ greeting }) => {
-  const onAdd = (sum) => {
-    console.log(sum);
+  const onAdd = (count) => {
+    console.log(count);
   };
 
   return (

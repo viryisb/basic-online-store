@@ -2,19 +2,19 @@ import { React, useState } from 'react';
 import './ItemCount.css';
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-  const [sum, setSum] = useState(initial);
+  const [count, setCount] = useState(initial);
 
   const buttonClickSumHandler = () => {
-    return sum < stock ? setSum(sum + 1) : stock;
+    return count < stock ? setCount(count + 1) : stock;
   };
   const buttonClickRestHandler = () => {
-    return sum > 0 ? setSum(sum - 1) : 0;
+    return count > 0 ? setCount(count - 1) : 0;
   };
 
   return (
     <>
       <div className='cart-btn-container'>
-        <button className='cart-btn' onClick={() => onAdd(sum)}>
+        <button className='cart-btn' onClick={() => onAdd(count)}>
           <span>Add to cart</span>
         </button>
 
@@ -28,7 +28,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           <input
             className='input-number'
             type='number'
-            value={sum}
+            value={count}
             min='0'
             max='1000'
           ></input>
