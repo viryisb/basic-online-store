@@ -1,23 +1,22 @@
 import { React, useEffect, useState } from 'react';
 import ItemCount from '../itemCount/ItemCount';
-import './ItemListContainer.css';
 import ItemList from './../itemList/ItemList';
-import items from './mockedData';
+import data from './mockedData';
 
 const ItemListContainer = ({ greeting }) => {
   const onAdd = (count) => {
     console.log(count);
   };
-  const [item, setItem] = useState([]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     const promesa = new Promise((resolve) => {
       setTimeout(() => {
-        resolve(items);
+        resolve(data);
       }, 3000);
     });
     promesa.then((res) => {
-      setItem(res);
+      setItems(res);
     });
   }, []);
 
