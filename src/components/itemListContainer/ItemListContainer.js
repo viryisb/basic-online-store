@@ -1,4 +1,4 @@
-import { React } from 'react';
+import { React, useEffect, useState } from 'react';
 import ItemCount from '../itemCount/ItemCount';
 import './ItemListContainer.css';
 import ItemList from './../itemList/ItemList';
@@ -8,6 +8,18 @@ const ItemListContainer = ({ greeting }) => {
   const onAdd = (count) => {
     console.log(count);
   };
+  const [item, setItem] = useState([]);
+
+  useEffect(() => {
+    const promesa = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(items);
+      }, 3000);
+    });
+    promesa.then((res) => {
+      setItem(res);
+    });
+  }, []);
 
   return (
     <>
