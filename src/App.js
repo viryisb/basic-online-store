@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 
@@ -6,11 +7,17 @@ import NavBar from './components/navBar/NavBar';
 
 function App() {
   return (
-    <div className='App'>
+    <BrowserRouter>
       <NavBar />
-      <ItemListContainer greeting='Bienvenidos a la tienda' />
-      <ItemDetailContainer />
-    </div>
+      <Routes>
+        <Route
+          exact
+          path='/'
+          element={<ItemListContainer greeting='Bienvenidos a la tienda' />}
+        />
+        <Route exact path='/' element={<ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
