@@ -1,4 +1,4 @@
-const data = [
+const items = [
   {
     id: 1,
     name: 'rose',
@@ -18,4 +18,4 @@ const data = [
     stock: 100,
   },
 ];
-export default data;
+export default items;
