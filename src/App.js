@@ -9,13 +9,10 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
+
       <Routes>
-        <Route
-          exact
-          path='/'
-          element={<ItemListContainer greeting='Bienvenidos a la tienda' />}
-        />
         <Route exact path='/' element={<ItemDetailContainer />} />
+        <Route exact path='/' element={<ItemListContainer />} />
       </Routes>
     </BrowserRouter>
   );

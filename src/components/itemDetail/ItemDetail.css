@@ -18,7 +18,7 @@
   left: 1rem;
   padding: 0.7rem 1rem;
   font-size: 2rem;
-  color: var(--pink);
+  color: #e84393;
   background: rgba(255, 51, 153, 0.05);
   z-index: 1;
   border-radius: 0.5rem;
@@ -41,21 +41,16 @@
 
 /*  */
 
-.products .box-container .box .content .price {
-  font-size: 2.5rem;
-  color: var(--pink);
-  font-weight: bolder;
-  padding-top: 1rem;
-}
 .products .box-container .box .content .description {
   font-size: 2rem;
-  color: var(--pink);
+  color: #e84393;
   font-weight: bolder;
   padding-top: 1rem;
 }
 
 .products .box-container .box .content .price span {
-  font-size: 1.5rem;
-  color: #999;
-  font-weight: lighter;
+  font-size: 2.5rem;
+  color: #e84393;
+  font-weight: bolder;
+  padding-top: 1rem;
 }

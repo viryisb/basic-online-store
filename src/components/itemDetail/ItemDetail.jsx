@@ -13,7 +13,7 @@ const ItemDetail = ({ item }) => {
           <div className='content'>
             <div className='price'>
               {' '}
-              <span>{`price: $${item.price}`}</span>{' '}
+              <span>{` $${item.price}`}</span>{' '}
             </div>
             <p className='description'>{item.description}</p>
           </div>
