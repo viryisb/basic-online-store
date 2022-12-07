@@ -6,21 +6,21 @@ import './NavBar.css';
 const NavBar = () => {
   return (
     <nav className='navbar'>
-      <a href='#' className='logo'>
-        flower<span>.</span>
-      </a>
+      <Link to='/'>
+        <span className='isotype'>flower </span>
+      </Link>
       <ul>
         <li>
-          <a href='#'>Ramos</a>
+          <Link className='link'>Bouquets</Link>
         </li>
         <li>
-          <a href='#'>Arreglos Florales</a>
+          <Link className='link'>Pots</Link>
         </li>
         <li>
-          <a href='#'>Rosas</a>
+          <Link className='link'>Roses</Link>
         </li>
         <li>
-          <a href='#'>Linea Premium</a>
+          <Link className='link'>Wedding</Link>
         </li>
       </ul>
       <CartWidget />

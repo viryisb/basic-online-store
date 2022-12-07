@@ -18,7 +18,12 @@
   justify-content: space-between;
 }
 
-.navbar a {
+.navbar span {
+  font-size: 1.6rem;
+  padding: 0 1.5rem;
+  color: #666;
+}
+.link {
   font-size: 1.6rem;
   padding: 0 1.5rem;
   color: #666;
@@ -27,16 +32,12 @@ ul {
   list-style: none;
 }
 
-.navbar .logo {
+.navbar .isotype {
   font-size: 3rem;
-  color: #333;
+  color: #e84393;
   font-weight: bolder;
 }
 
-.logo span {
-  color: #e84393;
-}
-
-.navbar a:hover {
+.link:hover {
   color: #e84393;
 }
