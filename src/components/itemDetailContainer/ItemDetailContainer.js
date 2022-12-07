@@ -1,8 +1,12 @@
 import { React, useEffect, useState } from 'react';
 import ItemDetail from '../itemDetail/ItemDetail';
+import ItemCount from '../itemCount/ItemCount';
 import item from './mockedData';
 
 const ItemDetailContainer = () => {
+  const onAdd = (count) => {
+    console.log(count);
+  };
   const [product, setProduct] = useState('');
 
   useEffect(() => {
@@ -20,6 +24,7 @@ const ItemDetailContainer = () => {
   return (
     <>
       <ItemDetail item={product} />
+      <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
     </>
   );
 };
