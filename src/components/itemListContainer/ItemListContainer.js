@@ -1,12 +1,9 @@
 import { React, useEffect, useState } from 'react';
-import ItemCount from '../itemCount/ItemCount';
+
 import ItemList from './../itemList/ItemList';
 import items from './mockedData';
 
-const ItemListContainer = ({ greeting }) => {
-  const onAdd = (count) => {
-    console.log(count);
-  };
+const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -22,7 +19,6 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <>
-      <ItemCount stock={5} initial={1} onAdd={onAdd} />
       <ItemList items={products} />
     </>
   );
