@@ -14,7 +14,7 @@ const Item = ({ item }) => {
           description: {item.description}, stock: {item.stock}
         </p>
       </div>
-      <Link to={`/item/${item.id}`}> Ir al detalle</Link>
+      <Link to={`/item/${item.id}`}> Go to detail</Link>
     </div>
   );
 };

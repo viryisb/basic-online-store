@@ -11,7 +11,7 @@ const ItemDetail = ({ item }) => {
       <div className='box-container'>
         <div className='box'>
           <span className='discount'>-10%</span>
-          <div class='image'>
+          <div className='image'>
             <img src={item.photo} alt='rose pot' />
           </div>
           <div className='content'>
