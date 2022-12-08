@@ -1,7 +1,11 @@
 import { React } from 'react';
 import './ItemDetail.css';
+import ItemCount from '../itemCount/ItemCount';
 
 const ItemDetail = ({ item }) => {
+  const onAdd = (count) => {
+    console.log(count);
+  };
   return (
     <section className='products' id='products'>
       <div className='box-container'>
@@ -19,6 +23,7 @@ const ItemDetail = ({ item }) => {
           </div>
         </div>
       </div>
+      <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
     </section>
   );
 };
