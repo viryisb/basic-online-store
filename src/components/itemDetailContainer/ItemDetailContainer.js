@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
-  const { detailId } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     const getDetail = new Promise((resolve) => {
@@ -15,9 +15,9 @@ const ItemDetailContainer = () => {
       }, 2000);
     });
     getDetail.then((res) =>
-      setProduct(res.find((prod) => prod.id === parseInt(detailId)))
+      setProduct(res.find((prod) => prod.id === parseInt(id)))
     );
-  }, [detailId]);
+  }, [id]);
 
   return (
     <>
