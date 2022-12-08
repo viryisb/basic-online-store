@@ -4,10 +4,10 @@ import './ItemCount.css';
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
 
-  const buttonClickSumHandler = () => {
+  const increaseHandler = () => {
     return count < stock ? setCount(count + 1) : stock;
   };
-  const buttonClickRestHandler = () => {
+  const decreaseHandler = () => {
     return count > 0 ? setCount(count - 1) : 0;
   };
 
@@ -19,10 +19,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         </button>
 
         <div className='input-group input-number-group'>
-          <div
-            className='input-group-button'
-            onClick={() => buttonClickRestHandler()}
-          >
+          <div className='input-group-button' onClick={() => decreaseHandler()}>
             <span className='input-number-decrement'>-</span>
           </div>
           <input
@@ -34,7 +31,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           ></input>
           <button
             className='input-group-button'
-            onClick={() => buttonClickSumHandler()}
+            onClick={() => increaseHandler()}
           >
             <span className='input-number-increment'>+</span>
           </button>
