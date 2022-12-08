@@ -1,29 +1,27 @@
 import { React, useEffect, useState } from 'react';
 import ItemDetail from '../itemDetail/ItemDetail';
-import ItemCount from '../itemCount/ItemCount';
-import item from './mockedData';
+
+import items from '../../mockedData';
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
-  const onAdd = (count) => {
-    console.log(count);
-  };
-  const [product, setProduct] = useState('');
+  const [product, setProduct] = useState({});
+  const { detailId } = useParams();
 
   useEffect(() => {
-    const promesa = new Promise((resolve) => {
+    const getDetail = new Promise((resolve) => {
       setTimeout(() => {
-        resolve(item);
+        resolve(items);
       }, 2000);
     });
-    promesa.then((res) => {
-      setProduct(res);
-    });
-  }, []);
+    getDetail.then((res) =>
+      setProduct(res.find((prod) => prod.id === parseInt(detailId)))
+    );
+  }, [detailId]);
 
   return (
     <>
       <ItemDetail item={product} />
-      <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
     </>
   );
 };

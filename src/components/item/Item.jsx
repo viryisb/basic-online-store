@@ -1,4 +1,5 @@
 import { React } from 'react';
+import { Link } from 'react-router-dom';
 import './Item.css';
 
 const Item = ({ item }) => {
@@ -13,8 +14,8 @@ const Item = ({ item }) => {
           description: {item.description}, stock: {item.stock}
         </p>
       </div>
+      <Link to={`/item/${item.id}`}> Ir al detalle</Link>
     </div>
   );
 };
-
 export default Item;
