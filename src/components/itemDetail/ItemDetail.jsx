@@ -10,7 +10,6 @@ const ItemDetail = ({ item }) => {
     <section className='products' id='products'>
       <div className='box-container'>
         <div className='box'>
-          <span className='discount'>-10%</span>
           <div className='image'>
             <img src={item.photo} alt='rose pot' />
           </div>
@@ -21,9 +20,9 @@ const ItemDetail = ({ item }) => {
             </div>
             <p className='description'>{item.description}</p>
           </div>
+          <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
         </div>
       </div>
-      <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
     </section>
   );
 };
