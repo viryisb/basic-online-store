@@ -13,7 +13,6 @@ const ItemDetailContainer = () => {
     const promesa = new Promise((resolve) => {
       setTimeout(() => {
         resolve(item);
-        console.log(item.price);
       }, 2000);
     });
     promesa.then((res) => {

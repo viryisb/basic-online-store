@@ -11,16 +11,24 @@ const NavBar = () => {
       </Link>
       <ul>
         <li>
-          <Link className='link'>Bouquets</Link>
+          <Link to='/category/bouquet' className='link'>
+            Bouquets
+          </Link>
         </li>
         <li>
-          <Link className='link'>Pots</Link>
+          <Link to='/category/pot' className='link'>
+            Pots
+          </Link>
         </li>
         <li>
-          <Link className='link'>Roses</Link>
+          <Link to='/category/rose' className='link'>
+            Roses
+          </Link>
         </li>
         <li>
-          <Link className='link'>Wedding</Link>
+          <Link to='/category/wedding' className='link'>
+            Wedding
+          </Link>
         </li>
       </ul>
       <CartWidget />
