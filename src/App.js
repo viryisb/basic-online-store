@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
-import { CartContext } from './context/CartContext';
+import CartProvider from './context/CartContext';
 import React, { useContext } from 'react';
 import ItemListContainer from './components/itemListContainer/ItemListContainer';
 import NavBar from './components/navBar/NavBar';
 
 function App() {
   return (
-    <CartContext.Provider value={[]}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <CartProvider value={[]}>
         <NavBar />
 
         <Routes>
@@ -21,8 +21,8 @@ function App() {
           />
           <Route exact path='/item/:id' element={<ItemDetailContainer />} />
         </Routes>
-      </BrowserRouter>
-    </CartContext.Provider>
+      </CartProvider>
+    </BrowserRouter>
   );
 }
 
