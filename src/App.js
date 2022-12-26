@@ -5,6 +5,7 @@ import CartProvider from './context/CartContext';
 import React, { useContext } from 'react';
 import ItemListContainer from './components/itemListContainer/ItemListContainer';
 import NavBar from './components/navBar/NavBar';
+import Cart from './components/cart/Cart';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             element={<ItemListContainer />}
           />
           <Route exact path='/item/:id' element={<ItemDetailContainer />} />
+          <Route exact path='/cart' element={<Cart />} />
         </Routes>
       </CartProvider>
     </BrowserRouter>

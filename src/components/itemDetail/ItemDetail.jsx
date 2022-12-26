@@ -2,15 +2,15 @@ import { React, useState } from 'react';
 import './ItemDetail.css';
 import { useCartContext } from '../../context/CartContext';
 import ItemCount from '../itemCount/ItemCount';
-import { Link } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ item }) => {
-  const [goToCart, setGoToCart] = useState(false);
+  const [linkToCart, setLinkToCart] = useState(false);
   const { addItem } = useCartContext();
 
-  const onAdd = (data, quantity) => {
-    setGoToCart(true);
-    addItem(data, quantity);
+  const onAdd = (count) => {
+    setLinkToCart(true);
+    addItem(count);
   };
   return (
     <section className='products' id='products'>
@@ -26,8 +26,8 @@ const ItemDetail = ({ item }) => {
             </div>
             <p className='description'>{item.description}</p>
           </div>
-          {goToCart ? (
-            <Link className='item-link-finish-purchase'>
+          {linkToCart ? (
+            <Link to='/cart' className='item-link-finish-purchase'>
               Finish the purchase
             </Link>
           ) : (
