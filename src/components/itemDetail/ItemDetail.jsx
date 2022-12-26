@@ -1,10 +1,13 @@
-import { React } from 'react';
+import { React, useState } from 'react';
 import './ItemDetail.css';
 import ItemCount from '../itemCount/ItemCount';
+import { Link } from '@mui/material';
 
 const ItemDetail = ({ item }) => {
+  const [goToCart, setGoToCart] = useState(false);
+
   const onAdd = (count) => {
-    console.log(count);
+    setGoToCart(true);
   };
   return (
     <section className='products' id='products'>
@@ -20,7 +23,13 @@ const ItemDetail = ({ item }) => {
             </div>
             <p className='description'>{item.description}</p>
           </div>
-          <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+          {goToCart ? (
+            <Link className='item-link-finish-purchase'>
+              Finish the purchase
+            </Link>
+          ) : (
+            <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+          )}
         </div>
       </div>
     </section>
