@@ -1,13 +1,16 @@
 import { React, useState } from 'react';
 import './ItemDetail.css';
+import { useCartContext } from '../../context/CartContext';
 import ItemCount from '../itemCount/ItemCount';
 import { Link } from '@mui/material';
 
 const ItemDetail = ({ item }) => {
   const [goToCart, setGoToCart] = useState(false);
+  const { addItem } = useCartContext();
 
-  const onAdd = (count) => {
+  const onAdd = (data, quantity) => {
     setGoToCart(true);
+    addItem(data, quantity);
   };
   return (
     <section className='products' id='products'>
