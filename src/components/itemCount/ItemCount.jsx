@@ -1,15 +1,11 @@
 import { React, useState } from 'react';
 import './ItemCount.css';
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial = 1, onAdd }) => {
   const [count, setCount] = useState(initial);
 
-  const increaseHandler = () => {
-    return count < stock ? setCount(count + 1) : stock;
-  };
-  const decreaseHandler = () => {
-    return count > 0 ? setCount(count - 1) : 0;
-  };
+  const increaseHandler = () => setCount(count < stock ? count + 1 : stock);
+  const decreaseHandler = () => setCount(count > 0 ? count - 1 : 0);
 
   return (
     <>
@@ -27,7 +23,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
             type='number'
             value={count}
             min='0'
-            max='1000'
+            max='100'
+            onChange={(event) => setCount(parseInt(event.target.value, 10))}
           ></input>
           <button
             className='input-group-button'
