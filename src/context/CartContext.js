@@ -13,12 +13,16 @@ const CartProvider = ({ children }) => {
 
   const removeItem = (id) => setCart(cart.filter((item) => item.id !== id));
 
-  const addItem = (item, newQuantity) => {
-    const newCart = cart.filter((prod) => prod.id !== item.id);
-    newCart.push({ ...item, quantity: newQuantity });
-    setCart(newCart);
+  const addItem = (product) => {
+    const existingProduct = cart.find((item) => item.id === product.id);
+    if (existingProduct) {
+      existingProduct.quantity += product.quantity;
+      setCart([...cart]);
+    } else {
+      setCart([...cart, product]);
+    }
+    console.log(cart);
   };
-  console.log('cart:', cart);
 
   return (
     <CartContext.Provider value={{ clear, isInCart, removeItem, addItem }}>

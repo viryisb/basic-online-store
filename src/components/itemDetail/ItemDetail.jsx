@@ -7,10 +7,9 @@ import { Link } from 'react-router-dom';
 const ItemDetail = ({ item }) => {
   const [linkToCart, setLinkToCart] = useState(false);
   const { addItem } = useCartContext();
-
   const onAdd = (count) => {
     setLinkToCart(true);
-    addItem(count);
+    addItem({ ...item, quantity: count });
   };
   return (
     <section className='products' id='products'>
