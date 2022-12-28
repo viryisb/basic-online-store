@@ -14,7 +14,9 @@ const ItemCart = ({ item }) => {
           <p>Quantity: {item.quantity}</p>
           <p>Unit Price: {item.price}</p>
           <p>Subtotal:{item.quantity * item.price}</p>
-          <button onClick={() => removeItem(item.id)}>Delete</button>
+          <button onClick={() => removeItem(item.id)} aria-label='Delete'>
+            Delete
+          </button>
         </div>
       </div>
     </div>

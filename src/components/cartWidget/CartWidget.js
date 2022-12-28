@@ -5,10 +5,14 @@ import './CartWidget.css';
 
 const CartWidget = () => {
   const { getTotalQuantity } = useCartContext();
+  const quantity = getTotalQuantity();
 
   return (
     <>
-      <span className='shopping-icon'>
+      <span
+        className='shopping-icon'
+        aria-label={`${quantity} products in the cart`}
+      >
         <ShoppingCartIcon />
         {getTotalQuantity() || ''}
       </span>

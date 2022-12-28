@@ -18,7 +18,7 @@ const ItemDetail = ({ item }) => {
       <div className='box-container'>
         <div className='box'>
           <div className='image'>
-            <img src={item.photo} alt='rose pot' />
+            <img src={item.photo} alt={`A photo of ${item.name}`} />
           </div>
           <div className='content'>
             <div className='price'>
@@ -28,7 +28,11 @@ const ItemDetail = ({ item }) => {
             <p className='description'>{item.description}</p>
           </div>
           {linkToCart ? (
-            <Link to='/cart' className='item-link-finish-purchase'>
+            <Link
+              to='/cart'
+              className='item-link-finish-purchase'
+              aria-label='Finish the purchase'
+            >
               Finish the purchase
             </Link>
           ) : (

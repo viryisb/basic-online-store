@@ -1,7 +1,6 @@
 import { React } from 'react';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
-import { CartContext } from '../../context/CartContext';
+
 import './Item.css';
 
 const Item = ({ item }) => {
@@ -9,7 +8,7 @@ const Item = ({ item }) => {
     <div className='products'>
       <div className='box'>
         <div className='image'>
-          <img src={item.photo} alt='rose'></img>
+          <img src={item.photo} alt={`A photo of ${item.name}`}></img>
         </div>
         <div className='content'>
           <h3>{item.name}</h3>

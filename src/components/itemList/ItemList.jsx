@@ -5,7 +5,9 @@ import './ItemList.css';
 const ItemList = ({ items }) => {
   return (
     <section className='products' id='products'>
-      <h1 className='heading'>latest products</h1>
+      <h1 className='heading' aria-label='latest products'>
+        latest products
+      </h1>
       <div className='box-container'>
         {items.map((item) => (
           <Item item={item} key={item.id} />
