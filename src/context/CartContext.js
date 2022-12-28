@@ -6,7 +6,6 @@ export const useCartContext = () => useContext(CartContext);
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  console.log(cart);
 
   const clear = () => setCart([]);
 
@@ -22,7 +21,6 @@ const CartProvider = ({ children }) => {
     } else {
       setCart([...cart, product]);
     }
-    console.log('carrito:', cart);
   };
 
   const getTotalPrice = () => {
