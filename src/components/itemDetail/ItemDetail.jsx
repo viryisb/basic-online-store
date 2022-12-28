@@ -14,18 +14,18 @@ const ItemDetail = ({ item }) => {
   };
 
   return (
-    <section className='products' id='products'>
-      <div className='box-container'>
-        <div className='box'>
-          <div className='image'>
+    <section className='products'>
+      <div className='products__box-container'>
+        <div className='products__box'>
+          <div className='products__image'>
             <img src={item.photo} alt={`A photo of ${item.name}`} />
           </div>
-          <div className='content'>
-            <div className='price'>
+          <div className='products__content'>
+            <div className='products__price'>
               {' '}
               <span>{` $${item.price}`}</span>{' '}
             </div>
-            <p className='description'>{item.description}</p>
+            <p className='products__description'>{item.description}</p>
           </div>
           {linkToCart ? (
             <Link

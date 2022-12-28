@@ -4,7 +4,7 @@ import './ItemList.css';
 
 const ItemList = ({ items }) => {
   return (
-    <section className='products' id='products'>
+    <section className='products-list' id='products'>
       <h1 className='heading' aria-label='latest products'>
         latest products
       </h1>
