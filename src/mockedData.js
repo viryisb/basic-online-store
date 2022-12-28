@@ -63,7 +63,7 @@ const items = [
     category: 'wedding',
   },
   {
-    id: 7,
+    id: 8,
     name: 'yellow bouquet',
     description: 'excellent for your aniversary',
     stock: 10,
