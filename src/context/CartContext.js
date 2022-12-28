@@ -21,11 +21,29 @@ const CartProvider = ({ children }) => {
     } else {
       setCart([...cart, product]);
     }
-    console.log(cart);
+    console.log('carrito:', cart);
+  };
+
+  const getTotalPrice = () => {
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
+
+  const getTotalQuantity = () => {
+    return cart.reduce((total, item) => total + item.quantity, 0);
   };
 
   return (
-    <CartContext.Provider value={{ clear, isInCart, removeItem, addItem }}>
+    <CartContext.Provider
+      value={{
+        clear,
+        isInCart,
+        removeItem,
+        addItem,
+        getTotalPrice,
+        getTotalQuantity,
+        cart,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
