@@ -6,15 +6,26 @@ const ItemCart = ({ item }) => {
   const { removeItem } = useCartContext();
 
   return (
-    <div className='itemCart'>
+    <div className='item-cart'>
       <div key={item.id}>
-        <img src={item.image} alt={item.title} />
-        <div>
-          <p>Title: {item.title}</p>
-          <p>Quantity: {item.quantity}</p>
-          <p>Unit Price: {item.price}</p>
-          <p>Subtotal:{item.quantity * item.price}</p>
-          <button onClick={() => removeItem(item.id)} aria-label='Delete'>
+        <div
+          className='item-cart__image'
+          style={{ backgroundImage: `url(${item.photo})` }}
+        />
+        <div className='item-cart__info'>
+          <p className='item-cart__title'>Title: {item.name}</p>
+          <p className='item-cart__quantity'>Quantity: {item.quantity}</p>
+          <p className='item-cart__price'>Unit Price: {item.price}</p>
+          <div className='item-cart__subtotal-container'>
+            <p className='item-cart__subtotal'>
+              Subtotal:{item.quantity * item.price}
+            </p>
+          </div>
+          <button
+            className='item-cart__button'
+            onClick={() => removeItem(item.id)}
+            aria-label='Delete'
+          >
             Delete
           </button>
         </div>
