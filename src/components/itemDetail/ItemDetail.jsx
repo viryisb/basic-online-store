@@ -20,6 +20,9 @@ const ItemDetail = ({ item }) => {
           <div className='products__image'>
             <img src={item.photo} alt={`A photo of ${item.name}`} />
           </div>
+          <div className='products__name'>
+            <h3>{item.name}</h3>
+          </div>
           <div className='products__content'>
             <div className='products__price'>
               {' '}

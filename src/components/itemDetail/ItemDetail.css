@@ -55,6 +55,10 @@
   padding-top: 1rem;
 }
 
+.products__name h3 {
+  font-size: 2rem;
+  color: #333;
+}
 .products__price span {
   font-size: 2.5rem;
   color: #e84393;
