@@ -9,12 +9,10 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
 
-  console.log(id);
-
   useEffect(() => {
     setLoading(true);
     const db = getFirestore();
-    const getDetail = doc(db, 'items', '7jsjcJm6TQUKJxZT5lXG');
+    const getDetail = doc(db, 'items', id);
     getDoc(getDetail).then((snapshot) => {
       console.log(getDetail);
       setLoading(false);
@@ -27,13 +25,3 @@ const ItemDetailContainer = () => {
   return <>{loading ? <Loader /> : <ItemDetail item={product} />}</>;
 };
 export default ItemDetailContainer;
-/* useEffect(() => {
-    setLoading(true);
-    const getDetail = new Promise((resolve) => {
-      setLoading(false);
-      resolve(items);
-    });
-    getDetail.then((res) =>
-      setProduct(res.find((prod) => prod.id === parseInt(id)))
-    );
-  }, [id]); */

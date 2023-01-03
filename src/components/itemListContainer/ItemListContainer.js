@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Loader from '../Loader/Loader';
 import ItemList from './../itemList/ItemList';
-import items from '../../mockedData';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -11,19 +11,27 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     setLoading(true);
-    const getProducts = new Promise((resolve) => {
-      setTimeout(() => {
-        setLoading(false);
-        resolve(items);
-      }, 2000);
+
+    const db = getFirestore();
+    const getProducts = collection(db, 'items');
+    getDocs(getProducts).then((snapshot) => {
+      let items;
+      if (categoryId) {
+        items = snapshot.docs
+          .map((product) => ({
+            id: product.id,
+            ...product.data(),
+          }))
+          .filter((product) => product.category === categoryId);
+      } else {
+        items = snapshot.docs.map((product) => ({
+          id: product.id,
+          ...product.data(),
+        }));
+      }
+      setProducts(items);
+      setLoading(false);
     });
-    if (categoryId) {
-      getProducts.then((res) =>
-        setProducts(res.filter((item) => item.category === categoryId))
-      );
-    } else {
-      getProducts.then((res) => setProducts(res));
-    }
   }, [categoryId]);
 
   return <>{loading ? <Loader /> : <ItemList items={products} />}</>;
