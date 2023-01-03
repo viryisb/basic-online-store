@@ -14,8 +14,9 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     setLoading(true);
     const db = getFirestore();
-    const getDetail = doc(db, 'items', id);
+    const getDetail = doc(db, 'items', '7jsjcJm6TQUKJxZT5lXG');
     getDoc(getDetail).then((snapshot) => {
+      console.log(getDetail);
       setLoading(false);
       if (snapshot.exists()) {
         setProduct({ id: snapshot.id, ...snapshot.data() });
