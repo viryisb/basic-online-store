@@ -42,8 +42,8 @@
 .products-list .box-container .box .content {
   padding: 2rem;
   text-align: center;
-  max-height: 15rem; /* Tamaño máximo para el contenedor del texto */
-  overflow: hidden; /* Oculta el contenido que se sale del contenedor */
+  max-height: 15rem;
+  overflow: hidden;
 }
 
 .products-list .box-container .box .content h3 {
@@ -69,6 +69,12 @@
 }
 .item-link-to-detail:hover {
   background: rgb(215, 214, 214);
+}
+.products-list__no-items-message {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  padding: 2rem;
 }
 
 @media (max-width: 600px) {
