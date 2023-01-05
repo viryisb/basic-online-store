@@ -32,9 +32,12 @@ const Cart = () => {
         quantity: item.quantity || 0,
       })),
       total: getTotalPrice() || 0,
+      date: new Date(),
     });
-
+    console.log('ordersCollection:', ordersCollection);
+    console.log('order:', order);
     addDoc(ordersCollection, order).then((snapshot) => {
+      console.log('snapshot:', snapshot);
       setOrderId(snapshot.id);
     });
   };
