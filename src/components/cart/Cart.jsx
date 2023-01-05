@@ -33,7 +33,7 @@ const Cart = () => {
         quantity: item.quantity || 0,
       })),
       total: getTotalPrice() || 0,
-      date: new Date(),
+      date: new Date().toLocaleString(),
     };
 
     addDoc(ordersCollection, order).then((snapshot) => {
