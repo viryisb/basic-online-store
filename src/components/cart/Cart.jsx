@@ -37,6 +37,7 @@ const Cart = () => {
         quantity: item.quantity || 0,
       })),
       total: getTotalPrice() || 0,
+      date: new Date(),
     });
 
     addDoc(ordersCollection, order).then((snapshot) => {
