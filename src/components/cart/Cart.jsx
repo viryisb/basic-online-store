@@ -9,13 +9,14 @@ import CheckoutForm from '../checkoutForm/CheckoutForm';
 
 const Cart = () => {
   const { cart, getTotalPrice } = useCartContext();
-  const [order, setOrder] = useState({});
+
   const [buyer, setBuyer] = useState({
     name: '',
     email: '',
     phone: '',
     address: '',
   });
+
   const [orderId, setOrderId] = useState('');
 
   const handleSubmit = (event) => {
@@ -23,7 +24,7 @@ const Cart = () => {
     const db = getFirestore();
     const ordersCollection = collection(db, 'orders');
 
-    setOrder({
+    const order = {
       buyer,
       items: cart.map((item) => ({
         id: item.id || '',
@@ -33,11 +34,9 @@ const Cart = () => {
       })),
       total: getTotalPrice() || 0,
       date: new Date(),
-    });
-    console.log('ordersCollection:', ordersCollection);
-    console.log('order:', order);
+    };
+
     addDoc(ordersCollection, order).then((snapshot) => {
-      console.log('snapshot:', snapshot);
       setOrderId(snapshot.id);
     });
   };
@@ -46,7 +45,6 @@ const Cart = () => {
     const { value, name } = event.target;
     setBuyer({ ...buyer, [name]: value });
   };
-
   return cart.length === 0 ? (
     <div className='cart'>
       <p className='cart__empty-message'>Your cart is empty</p>
