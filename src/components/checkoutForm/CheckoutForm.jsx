@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CheckoutForm = ({ handleSubmit, changeHandler, buyer }) => {
+const CheckoutForm = ({ handleSubmit, handleChange, buyer }) => {
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor='name'>Name</label>
@@ -9,7 +9,7 @@ const CheckoutForm = ({ handleSubmit, changeHandler, buyer }) => {
         name='name'
         id='name'
         value={buyer.name}
-        onChange={changeHandler}
+        onChange={handleChange}
         required
       />
       <br />
@@ -19,7 +19,7 @@ const CheckoutForm = ({ handleSubmit, changeHandler, buyer }) => {
         name='email'
         id='email'
         value={buyer.email}
-        onChange={changeHandler}
+        onChange={handleChange}
         required
       />
       <br />
@@ -29,7 +29,7 @@ const CheckoutForm = ({ handleSubmit, changeHandler, buyer }) => {
         name='phone'
         id='phone'
         value={buyer.phone}
-        onChange={changeHandler}
+        onChange={handleChange}
         required
       />
       <br />
@@ -39,7 +39,7 @@ const CheckoutForm = ({ handleSubmit, changeHandler, buyer }) => {
         name='address'
         id='address'
         value={buyer.address}
-        onChange={changeHandler}
+        onChange={handleChange}
         required
       />
       <br />

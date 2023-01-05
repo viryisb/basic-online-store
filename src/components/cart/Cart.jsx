@@ -3,12 +3,7 @@ import { useCartContext } from '../../context/CartContext';
 import ItemCart from '../itemCart/ItemCart';
 import './Cart.css';
 import { Link } from 'react-router-dom';
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  FieldValue,
-} from 'firebase/firestore';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 import CheckoutForm from '../checkoutForm/CheckoutForm';
 
@@ -37,7 +32,6 @@ const Cart = () => {
         quantity: item.quantity || 0,
       })),
       total: getTotalPrice() || 0,
-      date: new Date(),
     });
 
     addDoc(ordersCollection, order).then((snapshot) => {
