@@ -13,7 +13,7 @@ const CartWidget = () => {
         className='shopping-icon'
         aria-label={`${quantity} products in the cart`}
       >
-        <ShoppingCartIcon />
+        <ShoppingCartIcon aria-hidden='true' />
         {getTotalQuantity() || ''}
       </span>
     </>
