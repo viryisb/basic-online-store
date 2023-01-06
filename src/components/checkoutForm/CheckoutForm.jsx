@@ -18,6 +18,9 @@ const CheckoutForm = ({ handleSubmit, handleChange, buyer }) => {
           id='name'
           value={buyer.name}
           onChange={handleChange}
+          aria-label='Name'
+          aria-describedby='name-description'
+          placeholder='Enter your name'
           required
         />
         <br />
@@ -31,6 +34,9 @@ const CheckoutForm = ({ handleSubmit, handleChange, buyer }) => {
           id='email'
           value={buyer.email}
           onChange={handleChange}
+          aria-label='Email'
+          aria-describedby='email-description'
+          placeholder='Enter your email'
           required
         />
         <br />
@@ -44,6 +50,9 @@ const CheckoutForm = ({ handleSubmit, handleChange, buyer }) => {
           id='phone'
           value={buyer.phone}
           onChange={handleChange}
+          aria-label='Phone'
+          aria-describedby='phone-description'
+          placeholder='Enter your phone number'
           required
         />
         <br />
@@ -57,10 +66,17 @@ const CheckoutForm = ({ handleSubmit, handleChange, buyer }) => {
           id='address'
           value={buyer.address}
           onChange={handleChange}
+          aria-label='Address'
+          aria-describedby='address-description'
+          placeholder='Enter your address'
           required
         />
         <br />
-        <button className='checkout-form__button' type='submit'>
+        <button
+          className='checkout-form__button'
+          type='submit'
+          title='Submit Order'
+        >
           Submit Order
         </button>
       </form>

@@ -48,8 +48,10 @@ const Cart = () => {
   return cart.length === 0 ? (
     <div className='cart-container'>
       <div className='cart'>
-        <p className='cart__empty-message'>Your cart is empty</p>
-        <Link className='cart__buy-link' to='/'>
+        <p className='cart__empty-message' aria-label='Cart is empty'>
+          Your cart is empty
+        </p>
+        <Link className='cart__buy-link' to='/' tabIndex='0'>
           Buy
         </Link>
       </div>
@@ -58,13 +60,16 @@ const Cart = () => {
     <div className='cart-container'>
       {orderId === '' ? (
         <>
+          {' '}
           <div className='cart'>
-            <p className='cart__title'>Brief</p>
+            <p className='cart__title' aria-label='Order brief'>
+              Brief
+            </p>
             {cart.map((item) => (
               <ItemCart className='cart__item' key={item.id} item={item} />
             ))}
 
-            <p className='cart__total'>
+            <p className='cart__total' aria-label='Total price'>
               <span>Total:</span> ${getTotalPrice()}
             </p>
           </div>
@@ -76,8 +81,10 @@ const Cart = () => {
         </>
       ) : (
         <div>
-          <p>Your order has been submitted successfully</p>
-          <p>{orderId}</p>
+          <p aria-label='Order submitted'>
+            Your order has been submitted successfully
+          </p>
+          <p aria-label='Order ID'>{orderId}</p>
         </div>
       )}
     </div>

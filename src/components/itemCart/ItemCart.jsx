@@ -12,20 +12,30 @@ const ItemCart = ({ item }) => {
           <div
             className='item-cart__image'
             style={{ backgroundImage: `url(${item.photo})` }}
+            alt={`Product image for ${item.name}`}
           />
         </div>
         <div className='item-cart__info'>
-          <p className='item-cart__title'>
+          <p className='item-cart__title' aria-label={`Product: ${item.name}`}>
             <span>Product:</span> {item.name}
           </p>
-          <p className='item-cart__quantity'>
+          <p
+            className='item-cart__quantity'
+            aria-label={`Quantity: ${item.quantity}`}
+          >
             <span>Quantity:</span> {item.quantity}
           </p>
-          <p className='item-cart__price'>
+          <p
+            className='item-cart__price'
+            aria-label={`Unit price: ${item.price}`}
+          >
             <span>Unit price:</span> ${item.price}
           </p>
           <div className='item-cart__subtotal-container'>
-            <p className='item-cart__subtotal'>
+            <p
+              className='item-cart__subtotal'
+              aria-label={`Subtotal: ${item.quantity * item.price}`}
+            >
               Subtotal: ${item.quantity * item.price}
             </p>
           </div>
