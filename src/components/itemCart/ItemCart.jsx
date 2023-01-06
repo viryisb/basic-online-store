@@ -8,17 +8,25 @@ const ItemCart = ({ item }) => {
   return (
     <div className='item-cart'>
       <div key={item.id}>
-        <div
-          className='item-cart__image'
-          style={{ backgroundImage: `url(${item.photo})` }}
-        />
+        <div className='item-cart__image-container'>
+          <div
+            className='item-cart__image'
+            style={{ backgroundImage: `url(${item.photo})` }}
+          />
+        </div>
         <div className='item-cart__info'>
-          <p className='item-cart__title'>Title: {item.name}</p>
-          <p className='item-cart__quantity'>Quantity: {item.quantity}</p>
-          <p className='item-cart__price'>Unit Price: {item.price}</p>
+          <p className='item-cart__title'>
+            <span>Product:</span> {item.name}
+          </p>
+          <p className='item-cart__quantity'>
+            <span>Quantity:</span> {item.quantity}
+          </p>
+          <p className='item-cart__price'>
+            <span>Unit price:</span> ${item.price}
+          </p>
           <div className='item-cart__subtotal-container'>
             <p className='item-cart__subtotal'>
-              Subtotal:{item.quantity * item.price}
+              Subtotal: ${item.quantity * item.price}
             </p>
           </div>
           <button

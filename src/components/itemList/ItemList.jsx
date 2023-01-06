@@ -7,7 +7,7 @@ const ItemList = ({ items }) => {
   return (
     <section className='products-list' id='products'>
       <h1 className='heading' aria-label='latest products'>
-        latest products
+        Latest products
       </h1>
       <div className='box-container'>
         {items && items.length > 0 ? (

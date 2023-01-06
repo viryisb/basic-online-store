@@ -46,23 +46,27 @@ const Cart = () => {
     setBuyer({ ...buyer, [name]: value });
   };
   return cart.length === 0 ? (
-    <div className='cart'>
-      <p className='cart__empty-message'>Your cart is empty</p>
-      <Link className='cart__buy-link' to='/'>
-        Buy
-      </Link>
+    <div className='cart-container'>
+      <div className='cart'>
+        <p className='cart__empty-message'>Your cart is empty</p>
+        <Link className='cart__buy-link' to='/'>
+          Buy
+        </Link>
+      </div>
     </div>
   ) : (
-    <>
+    <div className='cart-container'>
       {orderId === '' ? (
         <>
           <div className='cart'>
+            <p className='cart__title'>Brief</p>
             {cart.map((item) => (
-              <>
-                <ItemCart className='cart__item' key={item.id} item={item} />
-                <p className='cart__total'>total: {getTotalPrice()}</p>
-              </>
+              <ItemCart className='cart__item' key={item.id} item={item} />
             ))}
+
+            <p className='cart__total'>
+              <span>Total:</span> ${getTotalPrice()}
+            </p>
           </div>
           <CheckoutForm
             handleSubmit={handleSubmit}
@@ -76,7 +80,7 @@ const Cart = () => {
           <p>{orderId}</p>
         </div>
       )}
-    </>
+    </div>
   );
 };
 export default Cart;

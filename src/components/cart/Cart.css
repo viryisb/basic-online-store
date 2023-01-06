@@ -1,15 +1,21 @@
+.cart-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .cart {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50%;
-  margin: 4rem auto;
+  position: relative;
   background-color: white;
   border: 1px solid #ccc;
-
-  height: 350px; /* Altura de la tarjeta */
-  border-radius: 15px; /* Borde redondeado */
+  margin: 1rem 0 0 1rem;
+  margin-right: 1rem;
+  min-height: 350px;
+  border-radius: 5px;
 }
 
 .cart__empty-message {
@@ -32,7 +38,28 @@
 }
 
 .cart__total {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 1rem;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item-cart {
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+.cart__title {
+  font-size: 1.6rem;
+  padding-bottom: 2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  text-align: center;
+  z-index: 1;
 }
