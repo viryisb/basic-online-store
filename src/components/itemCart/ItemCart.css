@@ -9,7 +9,7 @@
 }
 
 .item-cart__image {
-  width: 70px; /* Agrega un ancho */
+  width: 70px;
   height: 70px;
   border-radius: 50%;
   background-size: cover;
