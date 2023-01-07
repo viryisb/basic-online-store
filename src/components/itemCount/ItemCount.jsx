@@ -19,28 +19,35 @@ const ItemCount = ({ stock, initial = 1, onAdd }) => {
         </button>
 
         <div className='input-group input-number-group'>
-          <div
-            className='input-group-button'
+          <button
+            className='input-group-button input-number-decrement'
             onClick={() => decreaseHandler()}
             aria-label='Decrement'
+            role='button'
+            tabindex='0'
           >
-            <span className='input-number-decrement'>-</span>
-          </div>
+            -
+          </button>
           <input
             className='input-number'
             type='number'
             value={count}
-            min='0'
+            min='1'
             max='100'
             aria-label='Quantity'
+            aria-valuenow={count}
+            aria-valuemin='1'
+            aria-valuemax='100'
             onChange={(event) => setCount(parseInt(event.target.value, 10))}
           ></input>
           <button
-            className='input-group-button'
+            className='input-group-button input-number-increment'
             onClick={() => increaseHandler()}
             aria-label='Increment'
+            role='button'
+            tabindex='0'
           >
-            <span className='input-number-increment'>+</span>
+            +
           </button>
         </div>
       </div>
