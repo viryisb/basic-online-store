@@ -1,6 +1,4 @@
 .footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
@@ -20,8 +18,6 @@
 }
 @media (min-width: 768px) {
   .footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
   }
 }
