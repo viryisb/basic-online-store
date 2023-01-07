@@ -29,6 +29,7 @@
 }
 *:focus {
   outline: 2px solid blue;
+  border-radius: 5px;
 }
 
 @keyframes App-logo-spin {
