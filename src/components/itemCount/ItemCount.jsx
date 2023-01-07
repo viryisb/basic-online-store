@@ -24,7 +24,6 @@ const ItemCount = ({ stock, initial = 1, onAdd }) => {
             onClick={() => decreaseHandler()}
             aria-label='Decrement'
             role='button'
-            tabindex='0'
           >
             -
           </button>
@@ -45,7 +44,6 @@ const ItemCount = ({ stock, initial = 1, onAdd }) => {
             onClick={() => increaseHandler()}
             aria-label='Increment'
             role='button'
-            tabindex='0'
           >
             +
           </button>

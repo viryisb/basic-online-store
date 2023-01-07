@@ -83,11 +83,11 @@ const Cart = () => {
           />
         </>
       ) : (
-        <div>
+        <div className='cart__submitted'>
           <p aria-label='Order submitted'>
             Your order has been submitted successfully
           </p>
-          <p aria-label='Order ID'>{orderId}</p>
+          <p aria-label='Order ID'>with the ID {orderId}</p>
         </div>
       )}
     </div>

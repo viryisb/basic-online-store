@@ -14,7 +14,6 @@ const NavBar = () => {
           <Link
             to='/category/bouquet'
             className='navbar__link'
-            tabIndex='0'
             aria-label='Bouquets'
             aria-current={window.location.pathname === '/category/bouquet'}
           >
@@ -25,7 +24,6 @@ const NavBar = () => {
           <Link
             to='/category/pot'
             className='navbar__link'
-            tabIndex='0'
             aria-label='Pots'
             aria-current={window.location.pathname === '/category/pot'}
           >
@@ -36,7 +34,6 @@ const NavBar = () => {
           <Link
             to='/category/rose'
             className='navbar__link'
-            tabIndex='0'
             aria-label='Roses'
             aria-current={window.location.pathname === '/category/rose'}
           >
@@ -47,7 +44,6 @@ const NavBar = () => {
           <Link
             to='/category/wedding'
             className='navbar__link'
-            tabIndex='0'
             aria-label='Wedding'
             aria-current={window.location.pathname === '/category/wedding'}
           >
