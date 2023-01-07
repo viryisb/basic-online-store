@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import './ItemDetail.css';
 import { useCartContext } from '../../context/CartContext';
 import ItemCount from '../itemCount/ItemCount';
@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ item }) => {
   const [linkToCart, setLinkToCart] = useState(false);
-  const { addItem } = useCartContext();
+  const { addItem, isInCart } = useCartContext();
+  const itemIsInCart = isInCart(item.id);
 
   const onAdd = (count) => {
     setLinkToCart(true);
@@ -39,7 +40,17 @@ const ItemDetail = ({ item }) => {
               Finish your purchase
             </Link>
           ) : (
-            <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+            <ItemCount
+              stock={item.stock}
+              initial={1}
+              onAdd={onAdd}
+              disabled={itemIsInCart}
+            />
+          )}
+          {itemIsInCart && (
+            <p className='item-in-cart-message'>
+              This item is already in your cart
+            </p>
           )}
         </div>
       </div>
