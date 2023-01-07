@@ -54,7 +54,6 @@
 
 .cart__title {
   font-size: 1.6rem;
-  padding-bottom: 2em;
   position: absolute;
   top: 0;
   left: 0;
@@ -62,4 +61,7 @@
   z-index: 1;
   text-align: center;
   z-index: 1;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 5px;
 }

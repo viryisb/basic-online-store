@@ -1,6 +1,7 @@
 .item-cart {
   display: flex;
   align-items: flex-start;
+  padding-top: 5rem;
 }
 .item-cart__image-container {
   width: 70px;
@@ -25,6 +26,7 @@
 }
 .item-cart__title {
   font-size: 1.2rem;
+  margin-top: 2rem;
 }
 
 .item-cart__quantity,
