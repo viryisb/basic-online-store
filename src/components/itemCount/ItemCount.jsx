@@ -5,7 +5,7 @@ const ItemCount = ({ stock, initial = 1, onAdd }) => {
   const [count, setCount] = useState(initial);
 
   const increaseHandler = () => setCount(count < stock ? count + 1 : stock);
-  const decreaseHandler = () => setCount(count > 0 ? count - 1 : 0);
+  const decreaseHandler = () => setCount(count > 1 ? count - 1 : 1);
 
   return (
     <>
