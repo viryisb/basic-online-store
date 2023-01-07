@@ -45,11 +45,14 @@ const Cart = () => {
     const { value, name } = event.target;
     setBuyer({ ...buyer, [name]: value });
   };
+
+  const emptyCartMessage =
+    ' It seems that your cart is empty. Click the button below to start buying';
   return cart.length === 0 ? (
     <div className='cart-container'>
       <div className='cart'>
         <p className='cart__empty-message' aria-label='Cart is empty'>
-          Your cart is empty
+          {emptyCartMessage}
         </p>
         <Link className='cart__buy-link' to='/' tabIndex='0'>
           Buy

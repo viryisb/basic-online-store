@@ -6,6 +6,7 @@ import React, { useContext } from 'react';
 import ItemListContainer from './components/itemListContainer/ItemListContainer';
 import NavBar from './components/navBar/NavBar';
 import Cart from './components/cart/Cart';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/item/:id' element={<ItemDetailContainer />} />
           <Route exact path='/cart' element={<Cart />} />
         </Routes>
+        <Footer />
       </CartProvider>
     </BrowserRouter>
   );
