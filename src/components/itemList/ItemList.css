@@ -88,3 +88,9 @@
     width: 90%;
   }
 }
+
+@media (min-width: 768px) {
+  .box-container {
+    margin-bottom: calc(100px + 1rem);
+  }
+}

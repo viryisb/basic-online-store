@@ -34,9 +34,9 @@ const ItemDetail = ({ item }) => {
             <Link
               to='/cart'
               className='item-link-finish-purchase'
-              aria-label='Finish the purchase'
+              aria-label='Finish your purchase'
             >
-              Finish the purchase
+              Finish your purchase
             </Link>
           ) : (
             <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />

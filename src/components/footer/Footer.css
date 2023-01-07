@@ -1,3 +1,9 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 .footer .credit {
   text-align: center;
   padding: 1rem;
@@ -11,4 +17,17 @@
 .footer .credit span {
   color: #e84393;
   font-size: 1.7rem;
+}
+@media (min-width: 768px) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    position: static;
+  }
 }
