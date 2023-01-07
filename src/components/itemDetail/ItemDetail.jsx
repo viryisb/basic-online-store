@@ -40,12 +40,7 @@ const ItemDetail = ({ item }) => {
               Finish your purchase
             </Link>
           ) : (
-            <ItemCount
-              stock={item.stock}
-              initial={1}
-              onAdd={onAdd}
-              disabled={itemIsInCart}
-            />
+            <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
           )}
           {itemIsInCart && (
             <p className='item-in-cart-message'>
