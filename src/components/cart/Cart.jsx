@@ -8,7 +8,7 @@ import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import CheckoutForm from '../checkoutForm/CheckoutForm';
 
 const Cart = () => {
-  const { cart, getTotalPrice } = useCartContext();
+  const { cart, getTotalPrice, clear } = useCartContext();
 
   const [buyer, setBuyer] = useState({
     name: '',
@@ -38,6 +38,7 @@ const Cart = () => {
 
     addDoc(ordersCollection, order).then((snapshot) => {
       setOrderId(snapshot.id);
+      clear();
     });
   };
 
