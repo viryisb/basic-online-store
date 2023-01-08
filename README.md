@@ -8,7 +8,7 @@
 
 Este es un proyecto construido en [React](#Getting-Started-with-Create-React-App)
 
-# Descripción del proyecto
+### Descripción del proyecto
 
 Esta aplicación consiste en una tienda en línea que permite a los usuarios explorar y comprar productos. Cuenta con un carrito de compras donde los usuarios pueden ver y modificar el contenido del carrito, y calcular el precio total de los productos seleccionados. Desde la página principal se pueden ver todos los productos que contiene la tienda. La barra de navegación permite filtrar los productos por categoría. Cada ítem muestra información detallada incluyendo una imagen, un título, una descripción y la cantidad disponible en stock. Asimismo, todos los productos tienen un link para acceder al detalle, seleccionar la cantidad y agregar al carrito. Una vez que el usuario ha seleccionado todos los productos deseados y ha completado el formulario de pago, se crea una orden en una base de datos de Firebase y se proporciona un ID de orden al usuario para confirmar la compra.
 
