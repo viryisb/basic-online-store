@@ -1,10 +1,9 @@
 
-## Table of Contents
+## Indice
 1.[Instalación](#Getting-Started-with-Create-React-App)
 2.[Descripcion del Proyecto](#Descripcion-del-proyecto)
 
 
-#installation
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
