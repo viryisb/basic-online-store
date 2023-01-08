@@ -1,12 +1,12 @@
 
 ## Indice
 
-1.[Descripción del Proyecto](#Descripcion-del-proyecto)
+1.[Descripcion del Proyecto](#Descripcion-del-proyecto)
 2.[Instalación](#Getting-Started-with-Create-React-App)
 
 # Informacion general 
 
-Este es un proyecto construido en [React][[(#Getting-Started-with-Create-React-App)
+Este es un proyecto construido en [React](#Getting-Started-with-Create-React-App)
 
 # Descripción del proyecto
 
