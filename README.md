@@ -1,8 +1,8 @@
 
 ## Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#Getting-Started-with-Create-React-App)
+1.[Instalación](#Getting-Started-with-Create-React-App)
+2.[Descripción del Proyecto](# Descripción-del-proyecto)
+
 
 #installation
 # Getting Started with Create React App
@@ -123,6 +123,7 @@ Es un contexto de React que proporciona acceso a la información del carrito de 
 **useCartContext**
 
 Esta función proporciona un contexto para el carrito de compras, que se puede utilizar para acceder y modificar el estado del carrito desde cualquier componente hijo.
+
 
 ### Implementación de Firebase
 
