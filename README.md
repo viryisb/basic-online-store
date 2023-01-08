@@ -2,7 +2,7 @@
 ## Table of Contents
 1. [General Info](#general-info)
 2. [Technologies](#technologies)
-3. [Installation](#installation)
+3. [Installation](#Getting-Started-with-Create-React-App)
 
 #installation
 # Getting Started with Create React App
