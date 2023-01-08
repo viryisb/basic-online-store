@@ -2,7 +2,7 @@
 ## Indice
 
 1.[Descripcion del Proyecto](#Descripcion-del-proyecto)
-2.[Instalación](#Getting-Started-with-Create-React-App)
+2.[Instalación](#Instalacion)
 
 # Informacion general 
 
@@ -67,7 +67,7 @@ Se puede ver la documentación aquí https://firebase.google.com/docs
 En este proyecto se ha utilizado React Router para permitir la navegación entre las distintas páginas de la aplicación. Con esta librería se han definido las rutas de la aplicación y se ha establecido la forma en que cada componente debe ser renderizado en función de la ruta actual.
 Se puede ver la documentación aquí https://reactrouter.com/
 
-# Instalación
+# Instalacion
 
 # Getting Started with Create React App
 
