@@ -49,7 +49,7 @@ const Cart = () => {
 
   const emptyCartMessage =
     ' It seems that your cart is empty. Click the button below to start buying';
-  return cart.length === 0 ? (
+  return cart.length === 0 && orderId === '' ? (
     <div className='cart-container'>
       <div className='cart'>
         <p className='cart__empty-message' aria-label='Cart is empty'>
